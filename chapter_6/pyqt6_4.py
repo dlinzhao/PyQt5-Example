@@ -40,8 +40,8 @@ class Example(QMainWindow):
         # 弹出QFileDialog对话框，
         # 第一个字符串参数是对话框的标题，
         # 第二个指定对话框的工作目录，
-        # 默认情况下文件筛选器会匹配所有类型的文件(*)
-        fname = QFileDialog.getOpenFileName(self, 'Open file', None)
+        # 第三个参数是文件类型，默认情况下文件筛选器会匹配所有类型的文件(*)
+        fname = QFileDialog.getOpenFileName(self, 'Open file', None, 'CSV(*.csv)')
         if fname[0]:
             # 读取了选择的文件并将文件内容显示到了TextEdit控件。
             f = open(fname[0], 'r')
